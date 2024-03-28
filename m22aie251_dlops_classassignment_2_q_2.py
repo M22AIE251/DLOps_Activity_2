@@ -15,6 +15,7 @@ import torch.optim as optim
 import matplotlib.pyplot as plt
 # Version 1 
 
+# Version 2
 # Load FashionMNIST dataset
 transform = transforms.Compose([
     transforms.Resize((224, 224)),  # Resize images to match ResNet input size
