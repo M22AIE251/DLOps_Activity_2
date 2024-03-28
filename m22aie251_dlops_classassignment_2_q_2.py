@@ -13,6 +13,7 @@ import torchvision.transforms as transforms
 import torch.nn as nn
 import torch.optim as optim
 import matplotlib.pyplot as plt
+# Version 1 
 
 # Load FashionMNIST dataset
 transform = transforms.Compose([
