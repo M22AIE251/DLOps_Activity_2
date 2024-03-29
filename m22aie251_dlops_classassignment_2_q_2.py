@@ -102,24 +102,6 @@ top5_correct = 0
 total = 0
 
 
-with torch.no_grad():
-
-  iteration_count = 0
-
-  for inputs, labels in testloader:
-
-    if iteration_count > 4 :
-      break
-
-    iteration_count = iteration_count + 1
-
-    inputs, labels = inputs.to(device), labels.to(device)
-    outputs = resnet(inputs)
-    _, predicted = torch.topk(outputs, 5, dim=1)
-    total += labels.size(0)
-    for i in range(len(labels)):
-        if labels[i] in predicted[i]:
-            top5_correct += 1
 
 top5_accuracy = top5_correct / total
 print(f"Final Top-5 Test Accuracy: {top5_accuracy:.4f}")
