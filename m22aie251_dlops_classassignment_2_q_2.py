@@ -73,8 +73,8 @@ for optimizer_name, optimizer in optimizers.items():
 
             outputs = resnet(inputs)
             loss = criterion(outputs, labels)
-            loss.backward()
-            optimizer.step()
+            # loss.backward()
+            # optimizer.step()
 
             running_loss += loss.item()
             _, predicted = outputs.max(1)
